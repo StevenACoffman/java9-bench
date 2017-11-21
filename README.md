@@ -10,12 +10,8 @@ This translates to less disk space and faster startup times than the full JVM. W
 ### TL; DR version
 
 ```
-GIT_REVISION=$(git rev-parse HEAD)
 REPOSITORY=stevenacoffman/java9-bench
-docker build \
-        -t "${REPOSITORY}:GITSHA-${GIT_REVISION}" \
-        -t "${REPOSITORY}:latest" \
-        .
+docker build -t "${REPOSITORY}:latest" .
 docker run -it stevenacoffman/java9-bench
 ```
 
